@@ -55,6 +55,11 @@ public class Person
         return hobbies;
     }
 
+    public String getHobbyItem(int i)
+    {
+        return hobbies.get(i);
+    }
+
     public void setHobbies(String hobbies)
     {
         this.hobbies.add(hobbies);

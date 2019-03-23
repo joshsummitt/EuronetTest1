@@ -24,16 +24,10 @@ public class Main
             System.out.println("Error: " + e.getMessage());
         }
 
-        System.out.println(str);
-
         int x = 0;
         int y = 10;
         int streetAddressLength;
         int hobbiesLength;
-        String firstName;
-        String middleName;
-        String lastName;
-        String streetAddress;
 
         while (y < str.length())
         {
@@ -126,18 +120,18 @@ public class Main
                 y += 10;
             }
 
-            System.out.print("Hobbies: ");
+            System.out.print("Hobbies:  ");
             if (person.getHobbies().size() > 0)
             {
-                for (String hobby : person.getHobbies())
+                for (int i = 0; i < person.getHobbies().size(); i++)
                 {
-                    if (hobby.matches("^[ A-Za-z ,]+$"))
+                    if (person.getHobbyItem(i).matches("^[ A-Za-z ,]+$"))
                     {
-                        System.out.print(hobbies + "        ");
+                        System.out.print(person.getHobbyItem(i) + " ");
                     }
                     else
                     {
-                        System.out.println("ERROR   " + hobby + " is invalid");
+                        System.out.println("ERROR   " + person.getHobbyItem(i) + " is invalid");
                     }
                 }
             }
